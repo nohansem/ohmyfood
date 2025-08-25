@@ -1,0 +1,198 @@
+@mixin flex ($direction: column,
+    $justify: center) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $justify;
+    justify-content: center;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0
+}
+
+// HEADER
+
+// .header {
+//     @include flex;
+//     max-height: 100%;
+//     box-shadow: 0 4px 4px #000000;
+// }
+
+// .logo {
+//     margin-top: 14px;
+//     height: 36px;
+// }
+
+// .header-text {
+//     @include flex;
+//     font-size: 16px;
+//     background-color: #EAEAEA;
+//     box-shadow: 0 4px 4px #000000;
+// }
+
+.header {
+  @include flex;
+  flex-direction: column; 
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  margin:10px;
+}
+
+.test {
+  color: blue
+}
+
+.logo {
+  margin-top: 14px;
+  height: 36px;
+}
+
+.header-text {
+  @include flex;
+  font-size: 16px;
+  background-color: #EAEAEA;
+  padding: 10px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+// INTRO
+
+.intro {
+    @include flex;
+      background: #f6f6f6;
+      margin-bottom: 12px; 
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 42px;
+}
+
+.card-content p {
+    font-size: 18px;
+    color: #353535;
+    margin-bottom: 50px;
+}
+
+.intro a {
+    display: inline-block;
+    background: linear-gradient(135deg, #9356DC, #FF79DA);
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-bottom: 12px;
+}
+
+// FONCTIONNEMENT 
+
+.fonctionnement {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin: 12px;
+
+
+  h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    // background-color: #f6f6f6;
+
+    .card {
+      display: flex;
+      align-items: center;
+      background: #f6f6f6;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px #000000;
+      padding: 15px;
+      position: relative;
+
+      .card-number {
+        background: #9b59b6;
+        color: white;
+        font-weight: bold;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        position: absolute;
+        left: -14px;
+      }
+
+      .icon {
+        font-size: 19px;
+        margin-left: 25px;
+      }
+
+      .card-text {
+        font-size: 16px;
+        margin-left: 10px;
+      }
+    }
+  }
+
+}
+
+// RESTAURANTS
+
+#restaurants {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    .rest-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+    }
+
+    .rest-card {
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+        transition: transform 0.2s ease;
+
+        img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+    }
+
+}
+
+// FOOTER
+
+footer {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 22px 25px 22px 25px;
+    gap: 15px;
+
+    img {
+        filter: invert(100%);
+        height: 27px; 
+    }
+
+    p {
+        color: white;
+    }
+}
