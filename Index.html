@@ -9,19 +9,23 @@
         rel="stylesheet">
     <title>Ohmyfood</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
 
 </head>
 
+<!-- Header -->
+
 <body>
     <header>
-        <div class="header">
+        <div class="header-logo">
             <img src="./images/logo/ohmyfood.png" class="logo">
         </div>
+        <div class="header-text">
+            <p><i class="fa-solid fa-location-dot"></i> Paris, Belleville</p>
+        </div>
     </header>
-    <div class="header-text">
-        <p><i class="fa-solid fa-location-dot"></i> Paris, Belleville</p>
-    </div>
 
+    <!-- Intro -->
 
     <section class="intro">
         <h2>Réservez le menu qui vous convient</h2>
@@ -29,30 +33,33 @@
         <a href="#restaurants" class="recherche-restaurant">Explorer nos restaurants</a>
     </section>
 
+    <!-- Fonctionnement -->
+
     <section class="fonctionnement">
         <h2>Fonctionnement</h2>
 
         <div class="cards">
             <div class="card">
                 <span class="card-number">1</span>
-                <i class="icon">📱</i>
+                <i class="fa-solid fa-mobile-screen-button"></i>
                 <span class="card-text">Choisissez un restaurant</span>
             </div>
 
             <div class="card">
                 <span class="card-number">2</span>
-                <i class="icon">📝</i>
+                <i class="fa-solid fa-list"></i>
                 <span class="card-text">Composez votre menu</span>
             </div>
 
             <div class="card">
                 <span class="card-number">3</span>
-                <i class="icon">🏪</i>
+                <i class="fa-solid fa-store"></i>
                 <span class="card-text">Dégustez au restaurant</span>
             </div>
         </div>
-
     </section>
+
+    <!-- Restaurants : Retirer les <p> qui servent a rien-->
 
     <section class="restaurants" id="restaurants">
         <h2>Restaurants</h2>
@@ -89,19 +96,25 @@
         </div>
     </section>
 
+    <!-- Footer a faire : liste (li) -->
+
     <footer>
         <img src="./images/logo/ohmyfood.png">
 
-        <!-- <a href="#">Proposer un restaurant</a>s
-            <a href="#">Devenir partenaire</a>
-            <a href="#">Mentions légales</a>
-            <a href="#">Contact</a> -->
-        <!-- style="filter: invert(100%)" -->
-        <p>Proposer un restaurant</p>
-        <p>Devenir partenaire</p>
-        <p>Mentions légales</p>
-        <p>Contact</p>
-
+        <div class="footer-text">
+            <i class="fa-solid fa-utensils"></i>
+            <p>Proposer un restaurant</p>
+        </div>
+        <div class="footer-text">
+            <i class="fa-solid fa-handshake-angle"></i>
+            <p>Devenir partenaire</p>
+        </div>
+        <div class="footer-text">
+            <p>Mentions légales</p>
+        </div>
+        <div class="footer-text">
+            <p>Contact</p>
+        </div>
     </footer>
 </body>
 
