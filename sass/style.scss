@@ -21,7 +21,7 @@ body {
 
 header {
   @include flex;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 
   .header-logo {
     @include flex;
@@ -33,6 +33,7 @@ header {
       margin-top: 14px;
       height: 36px;
       padding: 16px 8px;
+      width: 197px;
     }
   }
 
@@ -43,6 +44,10 @@ header {
     padding: 10px;
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+    p {
+      margin: 10px 0px;
+    }
 
     i {
       margin-right: 8px;
@@ -55,7 +60,7 @@ header {
 .intro {
   @include flex;
   background: #f6f6f6;
-  padding: 12px;
+  padding: 25px 15px 40px 15px;
 
   h2 {
     display: flex;
@@ -63,7 +68,7 @@ header {
     text-align: center;
     font-size: 24px;
     font-weight: bold;
-    margin-left: 42px;
+    margin: 25px 42px 10px 42px;
     padding: 16 8 16 8px;
   }
 
@@ -74,9 +79,9 @@ header {
     font-size: 18px;
     font-weight: 300;
     color: #353535;
-    margin-bottom: 50px;
+    margin: 10px 0px 40px 0px;
     text-align: center;
-    padding: 16 8 16 8px;
+    padding: 16px 8px 16 8px;
   }
 
   a {
@@ -89,7 +94,7 @@ header {
     font-weight: 500;
     font-size: 16px;
     margin-bottom: 12px;
-    padding: 16px 8px 16px 8px;
+    padding: 16px;
   }
 
 }
@@ -99,7 +104,8 @@ header {
 .fonctionnement {
   font-family: Arial, sans-serif;
   padding: 20px;
-  margin-top: 12px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 
   h2 {
     font-size: 22px;
@@ -159,6 +165,10 @@ header {
 
 #restaurants {
   padding: 20px;
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: #f6f6f6;
 
   h2 {
     font-size: 24px;
@@ -177,14 +187,39 @@ header {
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
-    img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      display: block;
+    .card-img {
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #99e2d0;
+        color: #008766;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 5px 10px;
+      }
+
+
+      img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        display: block;
+      }
     }
 
     .card-content {
+      @include flex(row, start);
+      position: relative;
       margin-left: 15px;
       padding: 16px 8px;
       gap: 10%;
@@ -192,52 +227,22 @@ header {
       h3 {
         margin-bottom: 7px;
       }
+
+
+      .card-content-text {
+        @include flex(column, start);
+        margin-right: auto;
+      }
+
+      .card-content-icon {
+        font-size: 21px;
+        margin-top: auto;
+        
+    justify-content: end;
+      }
     }
   }
 }
-
-// Footer
-
-// footer {
-//   background-color: #353535;
-//   color: white;
-//   padding: 22px 25px 22px 25px;
-//   gap: 15px;
-
-//   img {
-//     width: 139px;
-//     filter: invert(100%);
-//     height: 27px;
-//     margin-top: 10px;
-//     margin-bottom: 10px;
-//   }
-
-//   i {
-//     height: 13px;
-//     margin-right: 10px;
-//   }
-
-//   // .footer-text {
-//   //   display: flex;
-//   //   justify-content: baseline;
-//   //   margin-bottom: 10px;
-//   // }
-
-//     .footer-text-1 {
-//     // display: flex;
-//     // // justify-content: baseline;
-//     font-weight: 500;
-//     margin-bottom: 10px;
-//   }
-
-//   .footer-text-2 {
-//     display: flex;
-//     justify-content: baseline;
-//     font-weight: 400;
-//     margin-bottom: 10px;
-//   }
-
-// }
 
 footer {
   background-color: #353535;
@@ -271,3 +276,92 @@ footer {
     font-weight: 400;
   }
 }
+
+
+// Responsive //
+
+// Tablette // 
+
+@media screen and (min-width: 768px) {
+    .fonctionnement .cards {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .fonctionnement .card {
+      flex: 1;
+      max-width: 30%;
+    }
+.fonctionnement {
+  padding: 0 180px;
+}
+
+  #restaurants {
+    padding: 0 180px;
+    margin: auto;
+
+    .rest-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: end;
+  }
+
+  .footer-text-1,
+  .footer-text-2 {
+    order: 1;
+    width: 130px;
+  }
+
+  img {
+    order: 2;
+    width: 139px;
+  }
+}
+
+// Desktop // 
+
+// @media screen and (min-width: 1024px) {
+//   .intro {
+//     max-width: 900px;
+//     margin: auto;
+//     padding: 60px 20px;
+
+//     h2 {
+//       font-size: 32px;
+//     }
+//     p {
+//       font-size: 22px;
+//     }
+//   }
+
+//   .fonctionnement {
+//     padding: 40px 80px;
+
+//     .cards {
+//       gap: 30px;
+
+//       .card {
+//         max-width: 280px;
+//       }
+//     }
+//   }
+
+//   #restaurants {
+//     padding: 60px 80px;
+
+//     .rest-cards {
+//       grid-template-columns: repeat(4, 1fr);
+//       gap: 32px;
+//     }
+//   }
+
+//   footer {
+//     padding: 40px 80px;
+//     flex-wrap: wrap;
+//     gap: 20px;
+//   }
+// }
