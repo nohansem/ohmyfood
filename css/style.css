@@ -66,9 +66,9 @@ header .header-text i {
   justify-content: center;
   text-align: center;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
   margin: 25px 42px 10px 42px;
-  padding: 16 8 16 8px;
+  padding: 16px 8px 16px 8px;
 }
 .intro p {
   display: flex;
@@ -96,9 +96,7 @@ header .header-text i {
 
 .fonctionnement {
   font-family: Arial, sans-serif;
-  padding: 20px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  padding: 48px 32px 68px 32px;
 }
 .fonctionnement h2 {
   font-size: 22px;
@@ -110,13 +108,12 @@ header .header-text i {
   gap: 15px;
 }
 .fonctionnement .cards .card {
-  display: flex;
-  align-items: center;
   background: #f6f6f6;
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   padding: 15px;
   position: relative;
+  width: 100%;
 }
 .fonctionnement .cards .card .card-number {
   background: #9b59b6;
@@ -131,6 +128,7 @@ header .header-text i {
   font-size: 14px;
   position: absolute;
   left: -14px;
+  top: 29px;
 }
 .fonctionnement .cards .card i {
   font-size: 19px;
@@ -147,11 +145,9 @@ header .header-text i {
 }
 
 #restaurants {
-  padding: 20px;
-  position: relative;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px 20px;
   background: #f6f6f6;
+  padding: 30px 13px;
 }
 #restaurants h2 {
   font-size: 24px;
@@ -167,6 +163,10 @@ header .header-text i {
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+#restaurants .rest-card a {
+  text-decoration: none;
+  color: inherit;
 }
 #restaurants .rest-card .card-img {
   position: relative;
@@ -195,11 +195,8 @@ header .header-text i {
 }
 #restaurants .rest-card .card-content {
   display: flex;
-  flex-direction: row;
-  align-items: start;
-  justify-content: center;
-  position: relative;
-  margin-left: 15px;
+  justify-content: space-between;
+  align-items: center;
   padding: 16px 8px;
   gap: 10%;
 }
@@ -215,8 +212,9 @@ header .header-text i {
 }
 #restaurants .rest-card .card-content .card-content-icon {
   font-size: 21px;
-  margin-top: auto;
-  justify-content: end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 footer {
@@ -236,7 +234,7 @@ footer img {
   margin: 10px 0;
 }
 footer i {
-  margin-right: 10px;
+  margin: 0 11px;
 }
 footer .footer-text-1,
 footer .footer-text-2 {
@@ -250,37 +248,198 @@ footer .footer-text-2 {
   font-weight: 400;
 }
 
+.restaurant-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  background: white;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.restaurant-header .back-btn {
+  color: black;
+  font-size: 20px;
+  margin-right: 16px;
+  position: absolute;
+  left: 16px;
+  transform: translateY(-50%);
+}
+.restaurant-header img {
+  margin: auto;
+  height: 30px;
+}
+
+.restaurant-banner img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.restaurant-page {
+  background: #f6f6f6;
+  margin-top: -40px;
+  border-radius: 32px 32px 0 0;
+  padding: 13px;
+  position: relative;
+}
+.restaurant-page .menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 19px;
+}
+.restaurant-page .menu-header h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
+  font-weight: 400;
+  margin-left: 17px;
+}
+.restaurant-page .menu-header i {
+  font-size: 22px;
+  color: #7e7e7e;
+}
+.restaurant-page .menu-categories {
+  margin-top: 30px;
+}
+.restaurant-page .menu-categories h2 {
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  position: relative;
+}
+.restaurant-page .menu-categories h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 45px;
+  height: 3px;
+  background: #99E2D0;
+}
+.restaurant-page .menu-categories .menu-item {
+  background: white;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.restaurant-page .menu-categories .menu-item .menu-item-text {
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.restaurant-page .menu-categories .menu-item .menu-item-text h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.restaurant-page .menu-categories .menu-item .menu-item-text p {
+  font-size: 15.04px;
+  font-weight: 300;
+}
+.restaurant-page .menu-categories .menu-item .menu-item-prix {
+  font-weight: bold;
+  align-self: flex-end;
+}
+.restaurant-page .menu-button {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+.restaurant-page .menu-button .bouton-commander {
+  background: linear-gradient(135deg, #FF79DA, #9356DC);
+  color: white;
+  font-weight: 500;
+  padding: 14px 40px;
+  border-radius: 25px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 @media screen and (min-width: 768px) {
+  .fonctionnement {
+    padding: 50px 180px;
+  }
   .fonctionnement .cards {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
   }
   .fonctionnement .card {
     flex: 1;
     max-width: 30%;
   }
-  .fonctionnement {
-    padding: 0 180px;
-  }
   #restaurants {
-    padding: 0 180px;
-    margin: auto;
+    padding: 28px 180px;
   }
   #restaurants .rest-cards {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
   }
   footer {
     flex-direction: row;
-    justify-content: end;
+    justify-content: flex-end;
+    gap: 16px;
   }
-  .footer-text-1,
-  .footer-text-2 {
+  footer .footer-text-1,
+  footer .footer-text-2 {
     order: 1;
-    width: 130px;
+    gap: 5px;
+    margin-right: 10px;
   }
-  img {
+  footer img {
     order: 2;
+    margin-left: 30px;
     width: 139px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .intro {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px;
+    max-width: 100%;
+  }
+  .intro h2 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .intro p {
+    font-size: 18px;
+    font-weight: 300;
+  }
+  .fonctionnement {
+    padding: 50px 180px;
+  }
+  .fonctionnement .cards {
+    gap: 30px;
+  }
+  #restaurants {
+    padding: 30px 180px;
+  }
+  .rest-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+  }
+  footer {
+    padding: 40px 80px;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .restaurant-page {
+    margin: -30px 193px 0 193px;
+  }
+  .restaurant-page .menu-header {
+    justify-content: center;
+    gap: 24px;
+  }
+  .menu-categories {
+    margin: 0 210 0 210px;
   }
 }
 
